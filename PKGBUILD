@@ -54,6 +54,7 @@ prepare() {
     patch -Np1 -i ${srcdir}/kernel-6.4.patch
     patch -Np1 -i ${srcdir}/buildfix_kernel_6.5-garbage-collect-all-references-to-get_user.patch
     patch -Np1 -i ${srcdir}/buildfix_kernel_6.5-handle-get_user_pages-vmas-argument-remova.patch
+    patch -Np1 -i ${srcdir}/kernel-6.6.patch
 }
 
 build() {
