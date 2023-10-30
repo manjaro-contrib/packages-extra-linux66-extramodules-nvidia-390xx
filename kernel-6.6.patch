@@ -11,7 +11,7 @@ diff --git a/nvidia-drm/nvidia-drm-drv.c b/nvidia-drm/nvidia-drm-drv.c
 index b93642a..1b310f3 100644
 --- a/nvidia-drm/nvidia-drm-drv.c
 +++ b/nvidia-drm/nvidia-drm-drv.c
-@@ -808,8 +808,12 @@ static struct drm_driver nv_drm_driver = {
+@@ -705,8 +705,11 @@ static struct drm_driver nv_drm_driver =
      .ioctls                 = nv_drm_ioctls,
      .num_ioctls             = ARRAY_SIZE(nv_drm_ioctls),
  
@@ -19,10 +19,10 @@ index b93642a..1b310f3 100644
 +// Those functions are no longer exported, but leaving them to NULL is equivalent
 +#if LINUX_VERSION_CODE < KERNEL_VERSION(6, 6, 0)
      .prime_handle_to_fd     = drm_gem_prime_handle_to_fd,
-     .prime_fd_to_handle     = drm_gem_prime_fd_to_handle,
+-
 +#endif
-     .gem_prime_import       = nv_drm_gem_prime_import,
-     .gem_prime_import_sg_table = nv_drm_gem_prime_import_sg_table,
- 
+ #if defined(NV_DRM_DRIVER_HAS_GEM_PRIME_CALLBACKS)
+     .gem_prime_export       = nv_drm_gem_prime_export,
+     .gem_prime_get_sg_table = nv_drm_gem_prime_get_sg_table,
 -- 
 2.41.0
