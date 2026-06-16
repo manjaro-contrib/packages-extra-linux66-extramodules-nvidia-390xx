@@ -1,5 +1,5 @@
-# Maintainer: Bernhard Landauer <bernhard[at]manjaro[dot]org>
 # Maintainer: Philip Müller <philm[at]manjaro[dot]org>
+# Contributor: Bernhard Landauer <bernhard[at]manjaro[dot]org>
 # Contributor: Gerd Röthig (DAC24)
 # Maintainer : Thomas Baechler <thomas@archlinux.org>
 # Contributor: Alonso Rodriguez <alonsorodi20 (at) gmail (dot) com>
@@ -13,7 +13,7 @@ _linuxprefix=linux66
 
 pkgname="${_linuxprefix}-nvidia-390xx"
 pkgver=390.157
-pkgrel=182
+pkgrel=183
 pkgdesc="NVIDIA kernel modules for ${_linuxprefix}"
 arch=('x86_64')
 url="https://www.nvidia.com/"
