@@ -13,7 +13,7 @@ _linuxprefix=linux66
 
 pkgname="${_linuxprefix}-nvidia-390xx"
 pkgver=390.157
-pkgrel=199
+pkgrel=200
 pkgdesc="NVIDIA kernel modules for ${_linuxprefix}"
 arch=('x86_64')
 url="https://www.nvidia.com/"
